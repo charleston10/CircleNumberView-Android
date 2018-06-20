@@ -4,8 +4,6 @@ import android.content.Context
 import android.graphics.Canvas
 import android.graphics.Color
 import android.graphics.Paint
-import android.graphics.drawable.ShapeDrawable
-import android.graphics.drawable.shapes.OvalShape
 import android.util.AttributeSet
 import android.util.TypedValue
 import android.view.View
@@ -13,7 +11,6 @@ import android.view.View
 
 class CircleNumberView(context: Context, attrs: AttributeSet) : View(context, attrs) {
 
-    private val drawable = ShapeDrawable(OvalShape())
     private var number = 0
 
     override fun onDraw(canvas: Canvas) {
@@ -21,7 +18,7 @@ class CircleNumberView(context: Context, attrs: AttributeSet) : View(context, at
         paint(canvas)
     }
 
-    public fun setNumber(number: Int) {
+    fun setNumber(number: Int) {
         this.number = number
     }
 
